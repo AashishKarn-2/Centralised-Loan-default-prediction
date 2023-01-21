@@ -19,11 +19,13 @@ from sklearn.ensemble import RandomForestClassifier
 if os.path.isfile('model.pkl'):
     with open('model.pkl', 'rb') as f:
         loaded_model = pickle.load(f)
+
 else:
     # Instantiate model with 1000 decision trees
     rf = RandomForestClassifier(n_estimators = 1000, random_state = 42)
     # Train the model on training data
     rf.fit(X_train, y_train)
+    print("Model Trained Successfully")
 
     # Save the model
     with open('model.pkl', 'wb') as f:
