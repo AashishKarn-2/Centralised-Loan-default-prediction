@@ -5,8 +5,5 @@ Centralized Loan default prediction is done here. This is also going to be imple
 
 
 
-[Image: image]
-
-image.png1920×1080 1.03 MB
 
 
