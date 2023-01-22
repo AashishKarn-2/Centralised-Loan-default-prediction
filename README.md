@@ -20,6 +20,8 @@ The algorithm used here is RandomForestClassifier with ensemble of 1000 trees. T
 1. Clone the repository using `git clone https://github.com/Aashish-compo/Centralised-Loan-default-prediction.git`
 2. Install the required libraries sunch as sklearn, numpy, pandas, pickle
 4. Run the code in the terminal using `python3 Centre.py`
+5. It will create a pickle file named `model.pkl` which is the trained model in first run.
+6. Run the code again then it will load the model from the pickle file and predict the result.
 
 
 

@@ -2,7 +2,13 @@ import data
 import pickle
 import os
 df = data.load_data()
-print(df.head())
+
+#Explore data by uncommenting the following lines
+
+# print(df.head())
+# print(df.describe())
+# print(df.columns)
+# print(df['Defaulted?'].value_counts())
 
 features = df.drop('Defaulted?', axis=1)
 target = df['Defaulted?']
@@ -26,6 +32,8 @@ else:
     # Train the model on training data
     rf.fit(X_train, y_train)
     print("Model Trained Successfully")
+    accuracy = rf.score(X_test, y_test)
+    print("Accuracy: ", accuracy)
 
     # Save the model
     with open('model.pkl', 'wb') as f:
